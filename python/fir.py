@@ -34,8 +34,8 @@ class fir(gr.sync_block):
     def __init__(self, taps):
         gr.sync_block.__init__(self,
             name="tf_fir",
-            in_sig=[numpy.float32],
-            out_sig=[numpy.float32])
+            in_sig=[numpy.complex64],
+            out_sig=[numpy.complex64])
         self.set_taps(taps)
         self.sess = tensorflow.Session()
         self.op = tensorflow.reduce_sum( self.x, keep_dims=True)

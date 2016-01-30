@@ -24,10 +24,10 @@ class add(gr.sync_block):
     x = tensorflow.placeholder("complex64")
     y = tensorflow.placeholder("complex64")
 
-    def __init__(self, taps):
+    def __init__(self):
         gr.sync_block.__init__(self,
             name="tf_add",
-            in_sig=[numpy.complex64],
+            in_sig=[numpy.complex64, numpy.complex64],
             out_sig=[numpy.complex64])
 
         self.sess = tensorflow.Session()
