@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<block>
+  <name>TensorFlow FIR</name>
+  <key>tf_fir</key>
+  <category>theano</category>
+  <import>import tf</import>
+  <import>import numpy</import>
+  <make>tf.fir($taps)</make>
+  
+  <callback>set_taps($taps)</callback>
+
+  <param>
+    <name>Taps</name>
+    <key>taps</key>
+    <value>numpy.ones(100, dtype=numpy.complex64)</value>
+    <type>raw</type>
+  </param>
+  
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

@@ -31,6 +31,7 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
+    fir.py
     DESTINATION ${GR_PYTHON_DIR}/tf
 )
 
