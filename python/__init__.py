@@ -33,3 +33,4 @@ except ImportError:
 # import any pure python here
 #
 from fir import *
+from add import *

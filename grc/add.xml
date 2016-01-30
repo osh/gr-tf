@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<block>
+  <name>TensorFlow ADD</name>
+  <key>tf_add</key>
+  <category>gr-TensorFlow</category>
+  <import>import tf</import>
+  <make>tf.add()</make>
+  
+  <sink>
+    <name>in1</name>
+    <type>complex</type>
+  </sink>
+  
+  <sink>
+    <name>in2</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

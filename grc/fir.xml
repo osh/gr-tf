@@ -2,9 +2,8 @@
 <block>
   <name>TensorFlow FIR</name>
   <key>tf_fir</key>
-  <category>theano</category>
+  <category>gr-TensorFlow</category>
   <import>import tf</import>
-  <import>import numpy</import>
   <make>tf.fir($taps)</make>
   
   <callback>set_taps($taps)</callback>
