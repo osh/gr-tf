@@ -33,6 +33,7 @@ GR_PYTHON_INSTALL(
     __init__.py
     add.py
     fir.py
+    interp.py
     DESTINATION ${GR_PYTHON_DIR}/tf
 )
 

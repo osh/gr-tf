@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<block>
+  <name>TensorFlow Sinc Interpolator</name>
+  <key>tf_interp</key>
+  <category>gr-TensorFlow</category>
+  <import>import tf</import>
+  <import>import numpy as np</import>
+  <make>tf.interp($rate, $type.nptype, $sinc_width, $sinc_size)</make>
+  
+  <callback>set_rate($rate)</callback>
+
+  <param>
+    <name>Interp Rate</name>
+    <key>rate</key>
+    <value>0.333</value>
+    <type>real</type>
+  </param>
+  <param>
+    <name>Sinc Width (taps 1 sided)</name>
+    <key>sinc_width</key>
+    <value>10</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Sinc Table Size (noffsets)</name>
+    <key>sinc_size</key>
+    <value>1024</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>IO Type</name>
+    <key>type</key>
+    <type>enum</type>
+        <option>
+            <name>Complex</name>
+            <key>complex</key>
+            <opt>nptype:np.complex64</opt>
+        </option>
+        <option>
+            <name>Float</name>
+            <key>float</key>
+            <opt>nptype:np.float32</opt>
+        </option>
+    </param>
+  
+  <sink>
+    <name>in</name>
+    <type>$type</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>$type</type>
+  </source>
+</block>

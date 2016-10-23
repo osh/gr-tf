@@ -20,5 +20,6 @@
 install(FILES
     fir.xml
     add.xml
+    interp.xml
     DESTINATION share/gnuradio/grc/blocks
 )
