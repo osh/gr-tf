@@ -35,3 +35,4 @@ except ImportError:
 from fir import *
 from add import *
 from interp import *
+from autocorr import *

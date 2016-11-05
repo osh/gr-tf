@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<block>
+  <name>TensorFlow AutoCorr</name>
+  <key>tf_autocorr</key>
+  <category>gr-TensorFlow</category>
+  <import>import tf</import>
+  <make>tf.autocorr($aclen, $nfft, $shift, $avg)</make>
+ 
+ 
+  <param>
+    <name>ACLen</name>
+    <key>aclen</key>
+    <value>1000</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>NFFT</name>
+    <key>nfft</key>
+    <value>2048</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Shift</name>
+    <key>shift</key>
+    <value>512</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Average</name>
+    <key>avg</key>
+    <value>True</value>
+    <type>bool</type>
+  </param>
+  
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

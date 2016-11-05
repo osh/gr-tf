@@ -34,6 +34,7 @@ GR_PYTHON_INSTALL(
     add.py
     fir.py
     interp.py
+    autocorr.py
     DESTINATION ${GR_PYTHON_DIR}/tf
 )
 
